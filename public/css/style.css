@@ -1,22 +1,242 @@
 @charset "utf-8";
-html{
+
+html {}
+
+body {
+    font-size: large;
 }
-body{
-}
+
 /* header */
-header{
-    background:#186AC9;
+header {
+    background: #186AC9;
+}
+
+#head {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#headLogo img {
+    width: 100px;
+}
+
+#headUser {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.head_menu {
+    position: relative;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+
+.head_trigger {
+    cursor: pointer;
+    z-index: 10;
+}
+
+.head_menulist {
+    display: none;
+}
+
+.head_menulist ul {
+    margin: 0;
+}
+
+.head_menulist ul li a {
+    display: block;
+    width: 250px;
+    height: 80px;
+    line-height: 80px;
+    border: none;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #777;
+}
+
+.head_menulist ul li a:hover {
+    color: #fff;
+    background-color: #239;
+}
+
+i.hidden {
+    display: none;
+}
+
+.head_trigger.active {}
+
+.head_menulist.active {
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: -50px;
+    border: 1px #239 solid;
+    background-color: #fff;
+    z-index: 5;
+}
+
+/* ---------- 共通 ---------- */
+.flex_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex_box {
+    position: relative;
+}
+
+.user_icon {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.marks {
+    width: 50px;
 }
 
 /* main content */
-#row{
+#row {
     display: flex;
     flex-flow: row wrap;
 }
-#container{
+
+#container {
     flex: 0 0 80%;
 }
-#side-bar{
+
+#side-bar {
     flex: 0 0 19%;
     border-left: 1px solid #727272;
+}
+
+#confirm {
+    border-bottom: 2px solid #ccc;
+}
+
+#contentHead {
+    border-bottom: 6px solid #ddd;
+    padding: 20px 50px;
+}
+
+/* ---------- top ---------- */
+/* new post form */
+.new_post_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.post_flex {
+    position: relative;
+}
+
+.input_row {
+    display: flex;
+    align-items: flex-end;
+}
+
+.input_row textarea {
+    all: unset;
+    width: 50vw;
+    height: 100px;
+    margin: 0 2%;
+}
+
+/* edit modal */
+#editModal {
+    margin: auto 0;
+}
+
+#postEdit {
+    width: 100%;
+    height: 20vh;
+}
+
+.btn_style {
+    all: unset;
+    cursor: pointer;
+}
+
+/* trash mark */
+.trash_hover {
+    display: block;
+    background-image: url('/images/trash.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.trash_hover:hover {
+    background-image: url('/images/trash-h.png');
+}
+
+/* top post view */
+.post_view {
+    padding: 10px 10px 10px 80px;
+    border-bottom: 2px solid #ccc;
+}
+
+.post_wrap {
+    display: flex;
+}
+
+.post_text {
+    padding: 0 20px;
+}
+
+.post_date {
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.post_marks {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post_mark {
+    position: relative;
+}
+
+/* ---------- search ---------- */
+#searchContent {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.search_wrap {
+    padding: 10px 0;
+}
+
+.flex_box.left {
+    padding-left: 1.5em;
+    margin-right: auto;
+}
+
+.follow_btn {
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 20px;
+}
+
+.follow_btn.follow {
+    background-color: #88BBFF;
+}
+
+.follow_btn.unfollow {
+    background-color: #ff4444;
 }

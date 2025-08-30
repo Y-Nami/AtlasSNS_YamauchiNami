@@ -30,13 +30,21 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        // 新規ユーザ登録のバリデーション処理
+        $validated = $request->validate([
+            'username' => 'required|min:2|max:12',
+            'email' => 'required|min:5|max:40|email',
+            'password' => 'required|alpha_num|min:8|max:20',
+            'password_confirmation' => 'required|alpha_num|min:8|max:20|same:password'
+        ]);
+
         User::create([
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('added');
+        return redirect('added')->with('username', $request->username);
     }
 
     public function added(): View

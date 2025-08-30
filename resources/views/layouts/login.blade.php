@@ -22,6 +22,8 @@
   <!--iphoneのアプリアイコン指定-->
   <link rel="apple-touch-icon-precomposed" href="画像のURL" />
   <!--OGPタグ/twitterカード-->
+  <!-- fontawesome利用 -->
+  <script src="https://kit.fontawesome.com/cfe35e07fb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -35,25 +37,25 @@
     </div>
     <div id="side-bar">
       <div id="confirm">
-        <p>〇〇さんの</p>
+        <p>{{ $user->username }}さんの</p>
         <div>
           <p>フォロー数</p>
-          <p>〇〇名</p>
+          <p>{{ $followCount }}名</p>
         </div>
-        <p class="btn"><a href="">フォローリスト</a></p>
+        <p class="btn"><a href="/followlist">フォローリスト</a></p>
         <div>
           <p>フォロワー数</p>
-          <p>〇〇名</p>
+          <p>{{ $followerCount }}名</p>
         </div>
-        <p class="btn"><a href="">フォロワーリスト</a></p>
+        <p class="btn"><a href="/followerlist">フォロワーリスト</a></p>
       </div>
-      <p class="btn"><a href="">ユーザー検索</a></p>
+      <p class="btn"><a href="/search">ユーザー検索</a></p>
     </div>
   </div>
   <footer>
   </footer>
   <script src="{{ asset('js/app.js') }}"></script>
-  <script src="JavaScriptファイルのURL"></script>
+  <script src="{{ asset('js/script.js') }}"></script>
   <script src="JavaScriptファイルのURL"></script>
 </body>
 

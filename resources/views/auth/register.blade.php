@@ -1,6 +1,17 @@
 <x-logout-layout>
-    <!-- 適切なURLを入力してください -->
-{!! Form::open(['url' => '〇〇']) !!}
+
+<!-- バリデーションエラー出力 -->
+@if($errors->any())
+    <div>
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+{!! Form::open(['url' => 'register']) !!}
 
 <h2>新規ユーザー登録</h2>
 
