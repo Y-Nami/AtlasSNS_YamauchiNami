@@ -97,6 +97,15 @@ i.hidden {
     position: relative;
 }
 
+.flex_box.left {
+    padding-left: 1.5em;
+    margin-right: auto;
+}
+
+.flex_box.top {
+    margin-bottom: auto;
+}
+
 .user_icon {
     width: auto;
     height: auto;
@@ -133,14 +142,6 @@ i.hidden {
 
 /* ---------- top ---------- */
 /* new post form */
-.new_post_wrap {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.post_flex {
-    position: relative;
-}
 
 .input_row {
     display: flex;
@@ -189,14 +190,6 @@ i.hidden {
     border-bottom: 2px solid #ccc;
 }
 
-.post_wrap {
-    display: flex;
-}
-
-.post_text {
-    padding: 0 20px;
-}
-
 .post_date {
     width: fit-content;
     white-space: nowrap;
@@ -221,11 +214,6 @@ i.hidden {
     padding: 10px 0;
 }
 
-.flex_box.left {
-    padding-left: 1.5em;
-    margin-right: auto;
-}
-
 .follow_btn {
     color: #fff;
     border-radius: 10px;
@@ -239,4 +227,9 @@ i.hidden {
 
 .follow_btn.unfollow {
     background-color: #ff4444;
+}
+
+/* profile */
+.topic_width {
+    width: 100px;
 }

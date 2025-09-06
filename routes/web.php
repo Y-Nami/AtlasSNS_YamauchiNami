@@ -40,12 +40,17 @@ Route::group(['middleware' => 'auth'], function(){
 
   // 新規投稿
   Route::post('post', [PostsController::class, 'store'])->name('posts.store');
+
   // 投稿編集
   Route::post('edit', [PostsController::class, 'edit'])->name('posts.edit');
   Route::post('delete', [PostsController::class, 'delete'])->name('posts.delete');
 
-  // フォロー・フォロー解除
+  // searchページ　フォロー・フォロー解除
   Route::post('follow', [UsersController::class, 'follow'])->name('users.follow');
   Route::post('unfollow', [UsersController::class, 'unfollow'])->name('users.unfollow');
+
+  // profileページ　フォロー・フォロー解除
+  Route::post('followp', [ProfileController::class, 'follow'])->name('profile.follow');
+  Route::post('unfollowp', [ProfileController::class, 'unfollow'])->name('profile.unfollow');
 
 });

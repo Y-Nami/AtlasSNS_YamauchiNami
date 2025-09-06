@@ -42,8 +42,8 @@ class User extends Authenticatable
         return $this->belongsToMany(
             User::class,    // 関連先モデル
             'follows',  // 中間テーブル名
-            'following_id',
-            'followed_id'
+            'following_id', // このモデルを識別する外部キー
+            'followed_id'   // 対象モデルを識別する外部キー
         );
     }
 

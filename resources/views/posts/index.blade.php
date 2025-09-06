@@ -1,10 +1,10 @@
 <x-login-layout>
 
-  <section id="contentHead" class="new_post_wrap"> <!-- 投稿フォーム -->
-    <div class="post_flex">
+  <section id="contentHead" class="flex_wrap"> <!-- 投稿フォーム -->
+    <div class="flex_box top">
       <img src="{{ asset('images/'.$user->icon_image) }}" alt="user_icon">
     </div>
-    <div class="post_flex">
+    <div class="flex_box">
       <form id="newPost" action="{{ route('posts.store') }}" method="POST">
         @csrf
         @if ($errors->any())
@@ -28,15 +28,17 @@
     <ul>
       @foreach ($posts as $post)
       <li class="post_view">
-        <div class="post_wrap">
-          <div class="post_flex">
+        <div class="flex_wrap">
+          <div class="flex_box">
             <img src="{{ asset('images/'.$post->user->icon_image) }}" alt="" class="user_icon">
           </div>
-          <div class="post_flex post_text">
+
+          <div class="flex_box left">
             <p>{{ $post->user->username }}</p>
             <p>{{ $post->post }}</p>
           </div>
-          <div class="post_flex post_date">
+
+          <div class="flex_box top post_date">
             {{ $post->created_at }}
           </div>
         </div>
