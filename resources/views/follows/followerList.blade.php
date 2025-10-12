@@ -22,17 +22,17 @@
     <ul>
       @foreach ($posts as $post)
       <li class="post_view">
-        <div class="post_wrap">
-          <div class="post_flex">
+        <div class="flex_wrap">
+          <div class="flex_box top">
             <a href="{{ url('/profile/'.$post->user_id) }}">
               <img src="{{ asset('images/'.$post->user->icon_image) }}" alt="" class="user_icon">
             </a>
           </div>
-          <div class="post_flex post_text">
+          <div class="flex_box left post_text">
             <p>{{ $post->user->username }}</p>
             <p>{{ $post->post }}</p>
           </div>
-          <div class="post_flex post_date">
+          <div class="flex_box top post_date">
             {{ $post->created_at }}
           </div>
         </div>

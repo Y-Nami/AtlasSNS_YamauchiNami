@@ -30,7 +30,10 @@ Route::group(['middleware' => 'auth'], function(){
 
   Route::get('top', [PostsController::class, 'index'])->name('top');
 
+  // プロフィール　相手ページ・編集ページ
   Route::get('profile/{id}', [ProfileController::class, 'profile'])->name('profile');
+  Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
+  Route::post('profile', [ProfileController::class, 'update'])->name('profile.update');
 
   Route::get('search', [UsersController::class, 'index'])->name('search');
   Route::post('search', [UsersController::class, 'search']);

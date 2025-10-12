@@ -233,3 +233,15 @@ i.hidden {
 .topic_width {
     width: 100px;
 }
+
+#profileEdit {
+    margin: 5% 50px;
+}
+
+#profileEdit .flex_wrap {
+    justify-content: center;
+}
+
+#profileEdit label {
+    width: 200px;
+}
