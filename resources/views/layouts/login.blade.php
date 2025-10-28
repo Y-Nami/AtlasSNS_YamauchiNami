@@ -38,12 +38,12 @@
     <div id="side-bar">
       <div id="confirm">
         <p>{{ $user->username }}さんの</p>
-        <div>
+        <div class="flex_wrap ffcount">
           <p>フォロー数</p>
           <p>{{ $followCount }}名</p>
         </div>
         <p class="btn"><a href="/followlist">フォローリスト</a></p>
-        <div>
+        <div class="flex_wrap ffcount">
           <p>フォロワー数</p>
           <p>{{ $followerCount }}名</p>
         </div>
