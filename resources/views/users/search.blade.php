@@ -3,17 +3,21 @@
 <!-- 検索ボックス -->
 <section id="contentHead">
   <!-- search box -->
-   <form action="/search" method="post">
-    @csrf
-    <input type="text" name="keyword" placeholder="ユーザー名">
-    <button type="submit" class="btn_style">
-      <img src="{{ asset('images/search.png') }}" alt="" class="marks">
-    </button>
-  </form>
-  <!-- search word -->
-   @if (!empty($keyword))
-   <p>{{ $keyword }}</p>
-   @endif
+    <div class="flex_wrap">
+      <form action="/search" method="post">
+        @csrf
+        <input type="text" name="keyword" placeholder="ユーザー名" class="input_search">
+        <button type="submit" class="btn_style">
+          <img src="{{ asset('images/search.png') }}" alt="" class="marks">
+        </button>
+      </form>
+      <!-- search word -->
+      <div>
+        @if (!empty($keyword))
+         <p>検索ワード：{{ $keyword }}</p>
+        @endif
+      </div>
+    </div>
 
 </section>
 

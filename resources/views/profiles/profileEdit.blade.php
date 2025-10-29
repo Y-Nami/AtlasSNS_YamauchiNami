@@ -43,7 +43,7 @@
           <label>アイコン画像</label>
           <input type="file" name="icon_image" class="input_file">
         </div>
-        <div>
+        <div class="flex_wrap">
           <input type="hidden" name="id" value="{{ $user->id }}">
           <button type="submit">更新</button>
         </div>

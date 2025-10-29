@@ -4,7 +4,7 @@
 <section id="contentHead">
   <div class="flex_wrap">
   <h2>フォローリスト</h2>
-  <ul class="flex_box flex_wrap">
+  <ul class="flex_box flex_wrap followlist">
     @foreach ($users as $user)
     <li class="flex_box">
       <a href="{{ url('/profile/'.$user->id) }}" class="btn_style">

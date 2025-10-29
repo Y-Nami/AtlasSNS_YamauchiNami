@@ -186,21 +186,44 @@ i.hidden {
     width: 50vw;
     height: 100px;
     margin: 0 2%;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 
 /* edit modal */
 #editModal {
-    margin: auto 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.modal-dialog,
+.modal-body,
+.modal-content {
+    width: 100%;
 }
 
 #postEdit {
-    width: 100%;
-    height: 20vh;
+    box-sizing: border-box;
+    width: 96%;
+    height: 30vh;
+    margin: 10px 2% 0 2%;
+    padding: 15px;
 }
 
 .btn_style {
     all: unset;
     cursor: pointer;
+}
+
+.modal-footer img {
+    width: 50px;
+    height: 50px;
 }
 
 /* trash mark */
@@ -243,6 +266,11 @@ i.hidden {
     margin: 0 auto;
 }
 
+.input_search {
+    padding: 8px;
+    width: 300px;
+}
+
 .search_wrap {
     padding: 10px 0;
 }
@@ -276,5 +304,26 @@ i.hidden {
 }
 
 #profileEdit label {
+    margin-left: 30px;
+    margin-bottom: 50px;
     width: 200px;
+}
+
+#profileEdit input {
+    width: 350px;
+}
+
+#profileEdit button {
+    all: unset;
+    border-radius: 5px;
+    width: 150px;
+    color: #fff;
+    background: #ff4444;
+    text-align: center;
+}
+
+/* follower list */
+
+.followlist {
+    flex-wrap: wrap;
 }

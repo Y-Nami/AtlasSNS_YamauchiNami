@@ -4,7 +4,7 @@
     <div class="flex_box top">
       <img src="{{ asset('images/'.$user->icon_image) }}" alt="user_icon">
     </div>
-    <div class="flex_box">
+    <div class="flex_box left">
       <form id="newPost" action="{{ route('posts.store') }}" method="POST">
         @csrf
         @if ($errors->any())
@@ -17,7 +17,7 @@
         </div>
         @endif
         <div class="input_row">
-          <textarea name="post" id="post" placeholder="投稿内容を入力してください。" required></textarea>
+          <textarea name="post" id="post" placeholder="投稿内容を入力してください。" wrap="soft" required></textarea>
           <a href="#" id="newPostSubmit"><img src="{{ asset('images/post.png') }}" alt="" class="marks"></a>
         </div>
       </form>
@@ -60,7 +60,7 @@
                     <textarea name="post_edit" id="postEdit" required>{{ $post->post }}</textarea>
                     <input type="hidden" name="id_edit" value="{{ $post->id }}">
                   </div>
-                  <div class="modal-footer">
+                  <div class="modal-footer flex_wrap">
                     <button type="submit" class="btn_style">
                       <img src="{{ asset('images/edit.png') }}" alt="">
                     </button>
