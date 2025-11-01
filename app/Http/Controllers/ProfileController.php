@@ -86,6 +86,7 @@ class ProfileController extends Controller
         $username = $request->input('username');
         $email = $request->input('email');
         $bio = $request->input('bio');
+        $filename = User::where('id',$id)->value('icon_image');
 
         if($request->hasFile('icon_image')){
             $file = $request->file('icon_image');

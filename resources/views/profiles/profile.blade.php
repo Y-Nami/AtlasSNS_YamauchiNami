@@ -15,7 +15,7 @@
     </div>
     <div class="flex_wrap"> <!-- 自己紹介 -->
       <p class="flex_box topic_width">自己紹介</p>
-      <p class="flex_box left">{{ $user->bio }}</p>
+      <p class="flex_box left bio">{{ $user->bio }}</p>
     </div>
   </div>
 

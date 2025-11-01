@@ -19,29 +19,31 @@
     <div class="flex_box">
       <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div>
+        <div class="flex_wrap input_profile">
           <label>ユーザー名</label>
           <input type="text" name="username" value="{{ $user->username }}">
         </div>
-        <div>
+        <div class="flex_wrap input_profile">
           <label>メールアドレス</label>
           <input type="text" name="email" value="{{ $user->email }}">
         </div>
-        <div>
+        <div class="flex_wrap input_profile">
           <label>パスワード</label>
           <input type="password" name="password">
         </div>
-        <div>
+        <div class="flex_wrap input_profile">
           <label>パスワード確認</label>
           <input type="password" name="password_confirmation">
         </div>
-        <div>
+        <div class="flex_wrap input_profile">
           <label>自己紹介</label>
           <input type="text" name="bio" value="{{ $user->bio }}">
         </div>
-        <div>
+        <div class="flex_wrap input_profile">
           <label>アイコン画像</label>
-          <input type="file" name="icon_image" class="input_file">
+          <div class="flex_box file_upload">
+            <input type="file" name="icon_image" class="input_file">
+          </div>
         </div>
         <div class="flex_wrap">
           <input type="hidden" name="id" value="{{ $user->id }}">

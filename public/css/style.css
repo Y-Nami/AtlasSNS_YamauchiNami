@@ -192,7 +192,7 @@ i.hidden {
 
 /* edit modal */
 #editModal {
-    display: block;
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -295,6 +295,10 @@ i.hidden {
     width: 100px;
 }
 
+.bio {
+    width: 40vw;
+}
+
 #profileEdit {
     margin: 5% 50px;
 }
@@ -305,18 +309,30 @@ i.hidden {
 
 #profileEdit label {
     margin-left: 30px;
-    margin-bottom: 50px;
     width: 200px;
 }
 
 #profileEdit input {
-    width: 350px;
+    width: 400px;
+    padding: 2px 5px;
+}
+
+.input_profile {
+    margin-bottom: 40px;
+}
+
+.file_upload {
+    box-sizing: border-box;
+    width: 400px;
+    border: 1px solid #666;
+    padding: 20px 40px;
+    text-align: center;
 }
 
 #profileEdit button {
     all: unset;
     border-radius: 5px;
-    width: 150px;
+    padding: 5px 60px;
     color: #fff;
     background: #ff4444;
     text-align: center;
