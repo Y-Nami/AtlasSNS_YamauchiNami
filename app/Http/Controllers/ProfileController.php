@@ -102,6 +102,6 @@ class ProfileController extends Controller
             'icon_image' => $filename
         ]);
 
-        return redirect(route('profile.edit'));
+        return redirect(route('top'));
     }
 }
