@@ -28,6 +28,9 @@ class UsersController extends Controller
             $users = User::where('id', '!=', $currentUser)
             ->where('username', 'like', '%'.$keyword.'%')
             ->get();
+        } else {
+            $users = User::where('id', '!=', $currentUser)
+            ->get();
         }
 
         return view('users.search', [
