@@ -35,11 +35,12 @@
 
           <div class="flex_box left">
             <p>{{ $post->user->username }}</p>
-            <p>{{ $post->post }}</p>
+            <p>{!! nl2br(e($post->post)) !!}</p>
+            <!-- <p>{{ $post->post }}</p> -->
           </div>
 
           <div class="flex_box top post_date">
-            {{ $post->created_at }}
+            {{ $post->created_at->format('y-m-d H:i') }}
           </div>
         </div>
         @if ($user->id == $post->user->id)

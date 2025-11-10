@@ -130,6 +130,7 @@ i.hidden {
 #side-bar {
     flex: 0 0 19%;
     /* ↑余ったスペースを伸ばさない、はみ出した時縮まない、要素の基本サイズ */
+    height: 100vh;
     border-left: 1px solid #727272;
 }
 
