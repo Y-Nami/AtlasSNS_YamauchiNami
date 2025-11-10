@@ -2,7 +2,7 @@
 
   <section id="contentHead" class="flex_wrap"> <!-- 投稿フォーム -->
     <div class="flex_box top">
-      <img src="{{ asset('images/'.$user->icon_image) }}" alt="user_icon">
+      <img src="{{ asset('images/'.$user->icon_image) }}" alt="user_icon" class="user_icon">
     </div>
     <div class="flex_box left">
       <form id="newPost" action="{{ route('posts.store') }}" method="POST">
@@ -29,7 +29,7 @@
       @foreach ($posts as $post)
       <li class="post_view">
         <div class="flex_wrap">
-          <div class="flex_box">
+          <div class="flex_box top">
             <img src="{{ asset('images/'.$post->user->icon_image) }}" alt="" class="user_icon">
           </div>
 

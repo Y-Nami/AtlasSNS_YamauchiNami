@@ -30,7 +30,7 @@
                     </nav>
                 </div>
                 <div class="head_menu user_icon">
-                    <img src="{{ asset('/images/'.$user->icon_image)}}" alt="usericon">
+                    <img src="{{ asset('/images/'.$user->icon_image)}}" alt="usericon" class="user_icon">
                 </div>
             </div>
         </div>

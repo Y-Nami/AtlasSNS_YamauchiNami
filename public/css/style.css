@@ -108,9 +108,8 @@ i.hidden {
 }
 
 .user_icon {
-    width: auto;
+    width: 50px;
     height: auto;
-    display: block;
 }
 
 .marks {

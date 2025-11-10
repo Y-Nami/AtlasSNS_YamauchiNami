@@ -8,7 +8,7 @@
     @foreach ($users as $user)
     <li class="flex_box">
       <a href="{{ url('/profile/'.$user->id) }}" class="btn_style">
-        <img src="{{ asset('images/'.$user->icon_image) }}" alt="">
+        <img src="{{ asset('images/'.$user->icon_image) }}" alt="" class="user_icon">
       </a>
     </li>
     @endforeach
