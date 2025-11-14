@@ -81,6 +81,11 @@ h2 {
     font-weight: normal;
 }
 
+.errors {
+    font-size: 12px;
+    width: 220px;
+}
+
 /* 登録後画面 */
 
 .welcome {

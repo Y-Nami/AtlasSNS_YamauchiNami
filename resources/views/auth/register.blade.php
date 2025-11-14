@@ -2,7 +2,7 @@
 
 <!-- バリデーションエラー出力 -->
 @if($errors->any())
-    <div>
+    <div class="errors">
         <ul>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
